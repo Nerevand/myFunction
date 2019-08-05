@@ -1,4 +1,4 @@
-const sumStrings = (firstValue, secondValue) => {
+const sumStrings = (firstValue, secondValue) => {       //parametrs as sting
     const res = [];
 
     const checkFirstZero = (arr) => {
