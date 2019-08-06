@@ -1,30 +1,30 @@
-Array.prototype.sumStrings = function (data) {       //parametrs as array of strings
-    let res = [];
-    let qwe = [];
+Array.prototype.sumStrings = function () {       //parametrs as array of strings
+    const res = [];
 
     const checkFirstZero = (arr) => {
         return arr[0] === '0' ? true : false;
     };
-    this.reduce((a, b) => {
-        a = a.toString().split('');
-        b = b.toString().split('');
 
-        if (a.length > b.length) {
-            let difLength = a.length - b.length;
+    this.reduce((firstValue, secondValue) => {
+        firstValue = firstValue.toString().split('');
+        secondValue = secondValue.toString().split('');
+
+        if (firstValue.length > secondValue.length) {
+            let difLength = firstValue.length - secondValue.length;
 
             for (let i = 0; i < difLength; i++) {
-                b.unshift('0');
+                secondValue.unshift('0');
             }
-        } else if (a.length < b.length) {
-            let difLength = b.length - a.length;
+        } else if (firstValue.length < secondValue.length) {
+            let difLength = secondValue.length - firstValue.length;
 
             for (let i = 0; i < difLength; i++) {
-                a.unshift('0');
+                firstValue.unshift('0');
             }
         }
 
-        for (let i = a.length - 1; i >= 0; i--) {
-            res[i] = (a[i] * 1 + b[i] * 1) + '';
+        for (let i = firstValue.length - 1; i >= 0; i--) {
+            res[i] = (firstValue[i] * 1 + secondValue[i] * 1) + '';
         }
 
         for (let i = res.length - 1; i >= 0; i--) {
