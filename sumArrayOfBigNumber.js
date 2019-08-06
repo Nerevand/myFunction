@@ -43,4 +43,4 @@ Array.prototype.sumStrings = function () {       //parametrs as array of strings
     return res.join('');
 }
 
-//['1200', '222', '115555555555555555555555555551'].sumStrings(); for test
+//['1200', '222', '115555555555555555555555555551'].sumStrings(); for example
