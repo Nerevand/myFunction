@@ -5,7 +5,7 @@ Object.prototype.deepCopy = function (obj) {
         return obj;
     }
     
-    var copy = obj.constructor();
+    let copy = obj.constructor();
     for (let key in obj) {
         if (typeof obj[key] == "object") {
             copy[key] = deepCopy(obj[key]);
